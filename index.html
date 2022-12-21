@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+  </head>
+  <style>
+    @font-face {
+      font-family: Sans;
+      src: url("fonts/JUST\ Sans\ Regular.otf");
+    }
+    @font-face {
+      font-family: AderoTrial;
+      src: url("fonts/AderoTrial-Regular.otf");
+    }
+    @font-face {
+      font-family: Qrada;
+      src: url("fonts/Qrada.otf");
+    }
+    @font-face {
+      font-family: Manilla;
+      src: url("fonts/Manilla\ for\ Personal\ Use\ only.otf");
+    }
+    @font-face {
+      font-family: EBGaramond;
+      src: url("fonts/EB_Garamond/static/EBGaramond-Regular.ttf");
+    }
+    @font-face {
+      font-family: Oswald;
+      src: url("fonts/Oswald/static/Oswald-Regular.ttf");
+    }
+    @font-face {
+      font-family: Roboto;
+      src: url("fonts/Roboto/Roboto-Regular.ttf");
+    }
+    @font-face {
+      font-family: Oswald;
+      src: url("fonts/Poppins/Poppins-Regular.ttf");
+    }
+    @font-face {
+      font-family: Quattrocento;
+      src: url("fonts/Quattrocento-Regular.ttf");
+    }
+
+    body {
+      background-color: #2f2f3b;
+    }
+    .vertical {
+      border-left: 5px solid black;
+      height: 200px;
+    }
+    .list {
+      margin-bottom: 1rem;
+      font-family: Sans;
+    }
+  </style>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-2" style="position: fixed; left: 0rem">
+          <div class="row" style="margin-left: 1rem">
+            <nav class="navbar">
+              <div class="container-fluid">
+                <a
+                  class="navbar-brand"
+                  href="#"
+                  style="color: white; font-family: Roboto"
+                >
+                  Bootstrap
+                </a>
+              </div>
+            </nav>
+          </div>
+          <div class="row" style="margin-left: 1rem">
+            <ul style="color: white; list-style: none; margin-top: 30%">
+              <li class="list" style="border-right: 3px solid white">
+                <div class="row">
+                  <div class="col-1">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-house-fill"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L8 2.207l6.646 6.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5Z"
+                      />
+                      <path
+                        d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6Z"
+                      />
+                    </svg>
+                  </div>
+                  <div class="col-10" style="font-family: Roboto">
+                    Dashboard
+                  </div>
+                </div>
+              </li>
+
+              <li class="list">
+                <div class="row">
+                  <div class="col-1">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-layers-fill"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M7.765 1.559a.5.5 0 0 1 .47 0l7.5 4a.5.5 0 0 1 0 .882l-7.5 4a.5.5 0 0 1-.47 0l-7.5-4a.5.5 0 0 1 0-.882l7.5-4z"
+                      />
+                      <path
+                        d="m2.125 8.567-1.86.992a.5.5 0 0 0 0 .882l7.5 4a.5.5 0 0 0 .47 0l7.5-4a.5.5 0 0 0 0-.882l-1.86-.992-5.17 2.756a1.5 1.5 0 0 1-1.41 0l-5.17-2.756z"
+                      />
+                    </svg>
+                  </div>
+                  <div class="col-10" style="font-family: Roboto">Home</div>
+                </div>
+              </li>
+
+              <li class="list">
+                <div class="row">
+                  <div class="col-1">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-wallet"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M0 3a2 2 0 0 1 2-2h13.5a.5.5 0 0 1 0 1H15v2a1 1 0 0 1 1 1v8.5a1.5 1.5 0 0 1-1.5 1.5h-12A2.5 2.5 0 0 1 0 12.5V3zm1 1.732V12.5A1.5 1.5 0 0 0 2.5 14h12a.5.5 0 0 0 .5-.5V5H2a1.99 1.99 0 0 1-1-.268zM1 3a1 1 0 0 0 1 1h12V2H2a1 1 0 0 0-1 1z"
+                      />
+                    </svg>
+                  </div>
+                  <div class="col-10" style="font-family: Roboto">Wallet</div>
+                </div>
+              </li>
+
+              <li class="list">
+                <div class="row">
+                  <div class="col-1">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-file-bar-graph-fill"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M12 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm-2 11.5v-6a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm-2.5.5a.5.5 0 0 1-.5-.5v-4a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5h-1zm-3 0a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5h-1z"
+                      />
+                    </svg>
+                  </div>
+                  <div class="col-10" style="font-family: Roboto">
+                    Statistic
+                  </div>
+                </div>
+              </li>
+
+              <li class="list">
+                <div class="row">
+                  <div class="col-1">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-journals"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M5 0h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2 2 2 0 0 1-2 2H3a2 2 0 0 1-2-2h1a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1H1a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v9a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1H3a2 2 0 0 1 2-2z"
+                      />
+                      <path
+                        d="M1 6v-.5a.5.5 0 0 1 1 0V6h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V9h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 2.5v.5H.5a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1H2v-.5a.5.5 0 0 0-1 0z"
+                      />
+                    </svg>
+                  </div>
+                  <div class="col-10" style="font-family: Roboto">
+                    Transaction
+                  </div>
+                </div>
+              </li>
+
+              <li class="list">
+                <div class="row">
+                  <div class="col-1">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-currency-exchange"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M0 5a5.002 5.002 0 0 0 4.027 4.905 6.46 6.46 0 0 1 .544-2.073C3.695 7.536 3.132 6.864 3 5.91h-.5v-.426h.466V5.05c0-.046 0-.093.004-.135H2.5v-.427h.511C3.236 3.24 4.213 2.5 5.681 2.5c.316 0 .59.031.819.085v.733a3.46 3.46 0 0 0-.815-.082c-.919 0-1.538.466-1.734 1.252h1.917v.427h-1.98c-.003.046-.003.097-.003.147v.422h1.983v.427H3.93c.118.602.468 1.03 1.005 1.229a6.5 6.5 0 0 1 4.97-3.113A5.002 5.002 0 0 0 0 5zm16 5.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0zm-7.75 1.322c.069.835.746 1.485 1.964 1.562V14h.54v-.62c1.259-.086 1.996-.74 1.996-1.69 0-.865-.563-1.31-1.57-1.54l-.426-.1V8.374c.54.06.884.347.966.745h.948c-.07-.804-.779-1.433-1.914-1.502V7h-.54v.629c-1.076.103-1.808.732-1.808 1.622 0 .787.544 1.288 1.45 1.493l.358.085v1.78c-.554-.08-.92-.376-1.003-.787H8.25zm1.96-1.895c-.532-.12-.82-.364-.82-.732 0-.41.311-.719.824-.809v1.54h-.005zm.622 1.044c.645.145.943.38.943.796 0 .474-.37.8-1.02.86v-1.674l.077.018z"
+                      />
+                    </svg>
+                  </div>
+                  <div class="col-10" style="font-family: Roboto">Exchange</div>
+                </div>
+              </li>
+
+              <li class="list">
+                <div class="row">
+                  <div class="col-1">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-newspaper"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M0 2.5A1.5 1.5 0 0 1 1.5 1h11A1.5 1.5 0 0 1 14 2.5v10.528c0 .3-.05.654-.238.972h.738a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 1 1 0v9a1.5 1.5 0 0 1-1.5 1.5H1.497A1.497 1.497 0 0 1 0 13.5v-11zM12 14c.37 0 .654-.211.853-.441.092-.106.147-.279.147-.531V2.5a.5.5 0 0 0-.5-.5h-11a.5.5 0 0 0-.5.5v11c0 .278.223.5.497.5H12z"
+                      />
+                      <path
+                        d="M2 3h10v2H2V3zm0 3h4v3H2V6zm0 4h4v1H2v-1zm0 2h4v1H2v-1zm5-6h2v1H7V6zm3 0h2v1h-2V6zM7 8h2v1H7V8zm3 0h2v1h-2V8zm-3 2h2v1H7v-1zm3 0h2v1h-2v-1zm-3 2h2v1H7v-1zm3 0h2v1h-2v-1z"
+                      />
+                    </svg>
+                  </div>
+                  <div class="col-10" style="font-family: Roboto">News</div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <hr style="color: white" />
+          <div class="row" style="margin-left: 1rem; margin-bottom: 0%">
+            <ul style="color: white; list-style: none; margin-top: 30%">
+              <li class="list">
+                <div class="row">
+                  <div class="col-1">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-house-fill"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L8 2.207l6.646 6.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5Z"
+                      />
+                      <path
+                        d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6Z"
+                      />
+                    </svg>
+                  </div>
+                  <div class="col-10" style="font-family: Roboto">
+                    Dashboard
+                  </div>
+                </div>
+              </li>
+
+              <li class="list">
+                <div class="row">
+                  <div class="col-1">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-layers-fill"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M7.765 1.559a.5.5 0 0 1 .47 0l7.5 4a.5.5 0 0 1 0 .882l-7.5 4a.5.5 0 0 1-.47 0l-7.5-4a.5.5 0 0 1 0-.882l7.5-4z"
+                      />
+                      <path
+                        d="m2.125 8.567-1.86.992a.5.5 0 0 0 0 .882l7.5 4a.5.5 0 0 0 .47 0l7.5-4a.5.5 0 0 0 0-.882l-1.86-.992-5.17 2.756a1.5 1.5 0 0 1-1.41 0l-5.17-2.756z"
+                      />
+                    </svg>
+                  </div>
+                  <div class="col-10" style="font-family: Roboto">Home</div>
+                </div>
+              </li>
+
+              <li class="list">
+                <div class="row">
+                  <div class="col-1">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-wallet"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M0 3a2 2 0 0 1 2-2h13.5a.5.5 0 0 1 0 1H15v2a1 1 0 0 1 1 1v8.5a1.5 1.5 0 0 1-1.5 1.5h-12A2.5 2.5 0 0 1 0 12.5V3zm1 1.732V12.5A1.5 1.5 0 0 0 2.5 14h12a.5.5 0 0 0 .5-.5V5H2a1.99 1.99 0 0 1-1-.268zM1 3a1 1 0 0 0 1 1h12V2H2a1 1 0 0 0-1 1z"
+                      />
+                    </svg>
+                  </div>
+                  <div class="col-10" style="font-family: Roboto">Wallet</div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="row" style="margin-left: 1rem">
+            <ul style="color: red; list-style: none; margin-top: 30%">
+              <li class="list">
+                <div class="row">
+                  <div class="col-1">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-power"
+                      viewBox="0 0 16 16"
+                    >
+                      <path d="M7.5 1v7h1V1h-1z" />
+                      <path
+                        d="M3 8.812a4.999 4.999 0 0 1 2.578-4.375l-.485-.874A6 6 0 1 0 11 3.616l-.501.865A5 5 0 1 1 3 8.812z"
+                      />
+                    </svg>
+                  </div>
+                  <div class="col-10" style="font-family: Roboto">Logout</div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-7" style="position: absolute; left: 16%">
+          <nav class="navbar">
+            <form class="container-fluid">
+              <div
+                class="input-group"
+                style="
+                  box-shadow: inset 10px 5px 25px 5px rgb(23, 22, 22),
+                    5px 5px 12px 2px rgb(23, 22, 22);
+                  border-radius: 1rem;
+                "
+              >
+                <span
+                  class="input-group-text"
+                  id="basic-addon1"
+                  style="
+                    background-color: black;
+                    color: aliceblue;
+                    border-color: black;
+                  "
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-search"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+                    />
+                  </svg>
+                </span>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Search what ever you want to search ..."
+                  aria-label="Username"
+                  aria-describedby="basic-addon1"
+                  style="
+                    background-color: black;
+                    color: aliceblue;
+                    border-color: black;
+                  "
+                />
+              </div>
+            </form>
+          </nav>
+          <div class="row" style="margin-top: 3rem">
+            <div class="col-12">
+              <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                  <div
+                    class="card"
+                    style="background-color: #1f1f29; color: aliceblue"
+                  >
+                    <!-- <img src="..." class="card-img-top" alt="..." /> -->
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">
+                        This is a longer card with supporting text below as a
+                        natural lead-in to additional content. This content is a
+                        little bit longer.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div
+                    class="card"
+                    style="background-color: #1f1f29; color: aliceblue"
+                  >
+                    <!-- <img src="..." class="card-img-top" alt="..." /> -->
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">
+                        This is a longer card with supporting text below as a
+                        natural lead-in to additional content. This content is a
+                        little bit longer.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div
+                    class="card"
+                    style="background-color: #1f1f29; color: aliceblue"
+                  >
+                    <!-- <img src="..." class="card-img-top" alt="..." /> -->
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">
+                        This is a longer card with supporting text below as a
+                        natural lead-in to additional content. This content is a
+                        little bit longer.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="row"
+            style="margin-top: 1rem; max-height: 20rem; min-height: 15rem"
+          >
+            <div class="col-12">
+              <div class="row row-cols-1 row-cols-md-2 g-4">
+                <div class="col">
+                  <div
+                    class="card"
+                    style="
+                      height: 15rem;
+                      background-color: #1f1f29;
+                      color: aliceblue;
+                    "
+                  >
+                    <!-- <img src="..." class="card-img-top" alt="..." /> -->
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">
+                        This is a longer card with supporting text below as a
+                        natural lead-in to additional content. This content is a
+                        little bit longer.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div
+                    class="card"
+                    style="
+                      height: 15rem;
+                      background-color: #1f1f29;
+                      color: aliceblue;
+                    "
+                  >
+                    <!-- <img src="..." class="card-img-top" alt="..." /> -->
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">
+                        This is a longer card with supporting text below as a
+                        natural lead-in to additional content. This content is a
+                        little bit longer.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="row"
+            style="margin-top: 1rem; max-height: 20rem; min-height: 15rem"
+          >
+            <div class="col-12">
+              <div class="row row-cols-1 row-cols-md-1 g-4">
+                <div class="col">
+                  <div
+                    class="card"
+                    style="
+                      height: 15rem;
+                      background-color: #1f1f29;
+                      color: aliceblue;
+                    "
+                  >
+                    <!-- <img src="..." class="card-img-top" alt="..." /> -->
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">
+                        This is a longer card with supporting text below as a
+                        natural lead-in to additional content. This content is a
+                        little bit longer.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-3" style="position: fixed; right: 0">
+          <form class="d-flex my-2 my-lg-0" style="margin-left: 45%">
+            <nav class="navbar">
+              <div class="row" style="margin-top: 1%">
+                <div class="col-2" style="margin-right: 1%">
+                  <div
+                    class="position-relative"
+                    style="
+                      background-color: #2f2f3b;
+                      border-color: #2f2f3b;
+                      color: aliceblue;
+                    "
+                    ;
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-share"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M13.5 1a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.499 2.499 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5zm-8.5 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm11 5.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+                <div class="col-2" style="margin-right: 1%">
+                  <div
+                    class="position-relative"
+                    style="
+                      background-color: #2f2f3b;
+                      border-color: #2f2f3b;
+                      color: aliceblue;
+                    "
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-bell"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zM8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+                <div class="col-2" style="margin-right: 1%">
+                  <div
+                    class="position-relative"
+                    style="
+                      background-color: #2f2f3b;
+                      border-color: #2f2f3b;
+                      color: aliceblue;
+                    "
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-incognito"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="m4.736 1.968-.892 3.269-.014.058C2.113 5.568 1 6.006 1 6.5 1 7.328 4.134 8 8 8s7-.672 7-1.5c0-.494-1.113-.932-2.83-1.205a1.032 1.032 0 0 0-.014-.058l-.892-3.27c-.146-.533-.698-.849-1.239-.734C9.411 1.363 8.62 1.5 8 1.5c-.62 0-1.411-.136-2.025-.267-.541-.115-1.093.2-1.239.735Zm.015 3.867a.25.25 0 0 1 .274-.224c.9.092 1.91.143 2.975.143a29.58 29.58 0 0 0 2.975-.143.25.25 0 0 1 .05.498c-.918.093-1.944.145-3.025.145s-2.107-.052-3.025-.145a.25.25 0 0 1-.224-.274ZM3.5 10h2a.5.5 0 0 1 .5.5v1a1.5 1.5 0 0 1-3 0v-1a.5.5 0 0 1 .5-.5Zm-1.5.5c0-.175.03-.344.085-.5H2a.5.5 0 0 1 0-1h3.5a1.5 1.5 0 0 1 1.488 1.312 3.5 3.5 0 0 1 2.024 0A1.5 1.5 0 0 1 10.5 9H14a.5.5 0 0 1 0 1h-.085c.055.156.085.325.085.5v1a2.5 2.5 0 0 1-5 0v-.14l-.21-.07a2.5 2.5 0 0 0-1.58 0l-.21.07v.14a2.5 2.5 0 0 1-5 0v-1Zm8.5-.5h2a.5.5 0 0 1 .5.5v1a1.5 1.5 0 0 1-3 0v-1a.5.5 0 0 1 .5-.5Z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+                <div class="col-2" style="margin-right: 1%">
+                  <div
+                    class="position-relative"
+                    style="
+                      background-color: #2f2f3b;
+                      border-color: #2f2f3b;
+                      color: aliceblue;
+                    "
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-person-gear"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm.256 7a4.474 4.474 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10c.26 0 .507.009.74.025.226-.341.496-.65.804-.918C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4s1 1 1 1h5.256Zm3.63-4.54c.18-.613 1.048-.613 1.229 0l.043.148a.64.64 0 0 0 .921.382l.136-.074c.561-.306 1.175.308.87.869l-.075.136a.64.64 0 0 0 .382.92l.149.045c.612.18.612 1.048 0 1.229l-.15.043a.64.64 0 0 0-.38.921l.074.136c.305.561-.309 1.175-.87.87l-.136-.075a.64.64 0 0 0-.92.382l-.045.149c-.18.612-1.048.612-1.229 0l-.043-.15a.64.64 0 0 0-.921-.38l-.136.074c-.561.305-1.175-.309-.87-.87l.075-.136a.64.64 0 0 0-.382-.92l-.148-.045c-.613-.18-.613-1.048 0-1.229l.148-.043a.64.64 0 0 0 .382-.921l-.074-.136c-.306-.561.308-1.175.869-.87l.136.075a.64.64 0 0 0 .92-.382l.045-.148ZM14 12.5a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0Z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+                <div class="col-2" style="margin-right: 1%">
+                  <div
+                    class="position-relative"
+                    style="
+                      background-color: #2f2f3b;
+                      border-color: #2f2f3b;
+                      color: aliceblue;
+                    "
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-rocket-takeoff"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M9.752 6.193c.599.6 1.73.437 2.528-.362.798-.799.96-1.932.362-2.531-.599-.6-1.73-.438-2.528.361-.798.8-.96 1.933-.362 2.532Z"
+                      />
+                      <path
+                        d="M15.811 3.312c-.363 1.534-1.334 3.626-3.64 6.218l-.24 2.408a2.56 2.56 0 0 1-.732 1.526L8.817 15.85a.51.51 0 0 1-.867-.434l.27-1.899c.04-.28-.013-.593-.131-.956a9.42 9.42 0 0 0-.249-.657l-.082-.202c-.815-.197-1.578-.662-2.191-1.277-.614-.615-1.079-1.379-1.275-2.195l-.203-.083a9.556 9.556 0 0 0-.655-.248c-.363-.119-.675-.172-.955-.132l-1.896.27A.51.51 0 0 1 .15 7.17l2.382-2.386c.41-.41.947-.67 1.524-.734h.006l2.4-.238C9.005 1.55 11.087.582 12.623.208c.89-.217 1.59-.232 2.08-.188.244.023.435.06.57.093.067.017.12.033.16.045.184.06.279.13.351.295l.029.073a3.475 3.475 0 0 1 .157.721c.055.485.051 1.178-.159 2.065Zm-4.828 7.475.04-.04-.107 1.081a1.536 1.536 0 0 1-.44.913l-1.298 1.3.054-.38c.072-.506-.034-.993-.172-1.418a8.548 8.548 0 0 0-.164-.45c.738-.065 1.462-.38 2.087-1.006ZM5.205 5c-.625.626-.94 1.351-1.004 2.09a8.497 8.497 0 0 0-.45-.164c-.424-.138-.91-.244-1.416-.172l-.38.054 1.3-1.3c.245-.246.566-.401.91-.44l1.08-.107-.04.039Zm9.406-3.961c-.38-.034-.967-.027-1.746.163-1.558.38-3.917 1.496-6.937 4.521-.62.62-.799 1.34-.687 2.051.107.676.483 1.362 1.048 1.928.564.565 1.25.941 1.924 1.049.71.112 1.429-.067 2.048-.688 3.079-3.083 4.192-5.444 4.556-6.987.183-.771.18-1.345.138-1.713a2.835 2.835 0 0 0-.045-.283 3.078 3.078 0 0 0-.3-.041Z"
+                      />
+                      <path
+                        d="M7.009 12.139a7.632 7.632 0 0 1-1.804-1.352A7.568 7.568 0 0 1 3.794 8.86c-1.102.992-1.965 5.054-1.839 5.18.125.126 3.936-.896 5.054-1.902Z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </nav>
+          </form>
+          <div class="row" style="margin-top: 3rem">
+            <div class="col-12">
+              <div
+                class="card text-center"
+                style="
+                  min-height: 20rem;
+                  background-color: #1f1f29;
+                  color: aliceblue;
+                  border-color: #2f2f3b;
+                  border-width: 0;
+                "
+              >
+                <div
+                  class="card-header"
+                  style="background-color: #2f2f3b; border-color: #2f2f3b"
+                >
+                  <ul
+                    class="nav nav-tabs card-header-tabs"
+                    style="margin-left: -5%"
+                  >
+                    <li class="nav-item">
+                      <a
+                        class="nav-link active"
+                        aria-current="true"
+                        href="#"
+                        style="
+                          background-color: #1f1f29;
+                          color: aliceblue;
+                          border-color: #1f1f29;
+                        "
+                        >Demo Desk</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a
+                        class="nav-link"
+                        href="#"
+                        style="text-decoration: none; color: aliceblue"
+                        >Customer Care</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Special title treatment</h5>
+                  <p class="card-text">
+                    With supporting text below as a natural lead-in to
+                    additional content.
+                  </p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row" style="margin-top: 1rem">
+            <div class="col-12">
+              <div
+                class="card"
+                style="background-color: #1f1f29; color: aliceblue"
+              >
+                <div class="card-header">Featured</div>
+                <ul class="list-group list-group-flush">
+                  <li
+                    class="list-group-item"
+                    style="background-color: #1f1f29; color: aliceblue"
+                  >
+                    <div class="row">
+                      <div class="col-6">First</div>
+                      <div class="col-6" style="padding-right: 0px">
+                        price:2000
+                      </div>
+                    </div>
+                  </li>
+                  <li
+                    class="list-group-item"
+                    style="background-color: #1f1f29; color: aliceblue"
+                  >
+                    <div class="row">
+                      <div class="col-6">Second</div>
+                      <div class="col-6" style="padding-right: 0px">
+                        price:2000
+                      </div>
+                    </div>
+                  </li>
+                  <li
+                    class="list-group-item"
+                    style="background-color: #1f1f29; color: aliceblue"
+                  >
+                    <div class="row">
+                      <div class="col-6">Third</div>
+                      <div class="col-6" style="padding-right: 0px">
+                        price:2000
+                      </div>
+                    </div>
+                  </li>
+                  <li
+                    class="list-group-item"
+                    style="background-color: #1f1f29; color: aliceblue"
+                  >
+                    <div class="row">
+                      <div class="col-6">Forth</div>
+                      <div class="col-6" style="padding-right: 0px">
+                        price:2000
+                      </div>
+                    </div>
+                  </li>
+                  <li
+                    class="list-group-item"
+                    style="background-color: #1f1f29; color: aliceblue"
+                  >
+                    <div class="row">
+                      <div class="col-6">Fifth</div>
+                      <div class="col-6" style="padding-right: 0px">
+                        price:2000
+                      </div>
+                    </div>
+                  </li>
+                  <li
+                    class="list-group-item"
+                    style="background-color: #1f1f29; color: aliceblue"
+                  >
+                    <div class="row">
+                      <div class="col-6">Sixth</div>
+                      <div class="col-6" style="padding-right: 0px">
+                        price:2000
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
