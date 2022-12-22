@@ -14,6 +14,7 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
     />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
   </head>
   <style>
     @font-face {
@@ -398,11 +399,11 @@
                   >
                     <!-- <img src="..." class="card-img-top" alt="..." /> -->
                     <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">
-                        This is a longer card with supporting text below as a
-                        natural lead-in to additional content. This content is a
-                        little bit longer.
+                      <h5 class="card-title">Bitcoin</h5>
+                      <h9 class="card-title" style="color: grey">My Balance</h9>
+                      <h3 class="card-title">$ 5000</h3>
+                      <p class="card-text" style="color: #f7931a">
+                        13000000 BTC
                       </p>
                     </div>
                   </div>
@@ -414,12 +415,12 @@
                   >
                     <!-- <img src="..." class="card-img-top" alt="..." /> -->
                     <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">
-                        This is a longer card with supporting text below as a
-                        natural lead-in to additional content. This content is a
-                        little bit longer.
-                      </p>
+                      <h5 class="card-title">Ethereum</h5>
+                      <h9 class="card-title" style="color: grey"
+                        >Monthly Income</h9
+                      >
+                      <h3 class="card-title">$ 500</h3>
+                      <p class="card-text" style="color: #739cc4">100000 ETH</p>
                     </div>
                   </div>
                 </div>
@@ -430,12 +431,12 @@
                   >
                     <!-- <img src="..." class="card-img-top" alt="..." /> -->
                     <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">
-                        This is a longer card with supporting text below as a
-                        natural lead-in to additional content. This content is a
-                        little bit longer.
-                      </p>
+                      <h5 class="card-title">Polygon</h5>
+                      <h9 class="card-title" style="color: grey"
+                        >Monthly Expense</h9
+                      >
+                      <h3 class="card-title">$ 50</h3>
+                      <p class="card-text" style="color: #8244e5">8000 MATIC</p>
                     </div>
                   </div>
                 </div>
@@ -459,12 +460,8 @@
                   >
                     <!-- <img src="..." class="card-img-top" alt="..." /> -->
                     <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">
-                        This is a longer card with supporting text below as a
-                        natural lead-in to additional content. This content is a
-                        little bit longer.
-                      </p>
+                      <h5 class="card-title">Wish List</h5>
+                      <canvas id="myChart" style="width: 100%"></canvas>
                     </div>
                   </div>
                 </div>
@@ -681,7 +678,7 @@
                           color: aliceblue;
                           border-color: #1f1f29;
                         "
-                        >Demo Desk</a
+                        >Order Placed</a
                       >
                     </li>
                     <li class="nav-item">
@@ -689,7 +686,7 @@
                         class="nav-link"
                         href="#"
                         style="text-decoration: none; color: aliceblue"
-                        >Customer Care</a
+                        >History</a
                       >
                     </li>
                   </ul>
@@ -711,16 +708,44 @@
                 class="card"
                 style="background-color: #1f1f29; color: aliceblue"
               >
-                <div class="card-header">Featured</div>
+                <div class="card-header">My Portfolio</div>
                 <ul class="list-group list-group-flush">
                   <li
                     class="list-group-item"
                     style="background-color: #1f1f29; color: aliceblue"
                   >
                     <div class="row">
-                      <div class="col-6">First</div>
-                      <div class="col-6" style="padding-right: 0px">
-                        price:2000
+                      <div class="col-2" style="color: #f7931a">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-6-circle"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8Zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM8.21 3.855c1.612 0 2.515.99 2.573 1.899H9.494c-.1-.358-.51-.815-1.312-.815-1.078 0-1.817 1.09-1.805 3.036h.082c.229-.545.855-1.155 1.98-1.155 1.254 0 2.508.88 2.508 2.555 0 1.77-1.218 2.783-2.847 2.783-.932 0-1.84-.328-2.409-1.254-.369-.603-.597-1.459-.597-2.642 0-3.012 1.248-4.407 3.117-4.407Zm-.099 4.008c-.92 0-1.564.65-1.564 1.576 0 1.032.703 1.635 1.558 1.635.868 0 1.553-.533 1.553-1.629 0-1.06-.744-1.582-1.547-1.582Z"
+                          />
+                        </svg>
+                      </div>
+                      <div class="col-5">
+                        <div class="row">Bitcoin</div>
+                        <div
+                          class="row"
+                          style="font-size: small; font-weight: lighter"
+                        >
+                          BTC
+                        </div>
+                      </div>
+                      <div class="col-5" style="padding-right: 0px">
+                        <div class="row">BTC 2000124.00</div>
+                        <div
+                          class="row"
+                          style="font-size: small; font-weight: lighter"
+                        >
+                          $ 10000000
+                        </div>
                       </div>
                     </div>
                   </li>
@@ -729,9 +754,37 @@
                     style="background-color: #1f1f29; color: aliceblue"
                   >
                     <div class="row">
-                      <div class="col-6">Second</div>
-                      <div class="col-6" style="padding-right: 0px">
-                        price:2000
+                      <div class="col-2" style="color: red">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-6-circle"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8Zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM8.21 3.855c1.612 0 2.515.99 2.573 1.899H9.494c-.1-.358-.51-.815-1.312-.815-1.078 0-1.817 1.09-1.805 3.036h.082c.229-.545.855-1.155 1.98-1.155 1.254 0 2.508.88 2.508 2.555 0 1.77-1.218 2.783-2.847 2.783-.932 0-1.84-.328-2.409-1.254-.369-.603-.597-1.459-.597-2.642 0-3.012 1.248-4.407 3.117-4.407Zm-.099 4.008c-.92 0-1.564.65-1.564 1.576 0 1.032.703 1.635 1.558 1.635.868 0 1.553-.533 1.553-1.629 0-1.06-.744-1.582-1.547-1.582Z"
+                          />
+                        </svg>
+                      </div>
+                      <div class="col-5">
+                        <div class="row">Polygon</div>
+                        <div
+                          class="row"
+                          style="font-size: small; font-weight: lighter"
+                        >
+                          MATIC
+                        </div>
+                      </div>
+                      <div class="col-5" style="padding-right: 0px">
+                        <div class="row">MATIC 2000124.00</div>
+                        <div
+                          class="row"
+                          style="font-size: small; font-weight: lighter"
+                        >
+                          $ 10000000
+                        </div>
                       </div>
                     </div>
                   </li>
@@ -740,9 +793,37 @@
                     style="background-color: #1f1f29; color: aliceblue"
                   >
                     <div class="row">
-                      <div class="col-6">Third</div>
-                      <div class="col-6" style="padding-right: 0px">
-                        price:2000
+                      <div class="col-2" style="color: #739cc4">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-6-circle"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8Zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM8.21 3.855c1.612 0 2.515.99 2.573 1.899H9.494c-.1-.358-.51-.815-1.312-.815-1.078 0-1.817 1.09-1.805 3.036h.082c.229-.545.855-1.155 1.98-1.155 1.254 0 2.508.88 2.508 2.555 0 1.77-1.218 2.783-2.847 2.783-.932 0-1.84-.328-2.409-1.254-.369-.603-.597-1.459-.597-2.642 0-3.012 1.248-4.407 3.117-4.407Zm-.099 4.008c-.92 0-1.564.65-1.564 1.576 0 1.032.703 1.635 1.558 1.635.868 0 1.553-.533 1.553-1.629 0-1.06-.744-1.582-1.547-1.582Z"
+                          />
+                        </svg>
+                      </div>
+                      <div class="col-5">
+                        <div class="row">Ethereum</div>
+                        <div
+                          class="row"
+                          style="font-size: small; font-weight: lighter"
+                        >
+                          ETH
+                        </div>
+                      </div>
+                      <div class="col-5" style="padding-right: 0px">
+                        <div class="row">ETH 2000124.00</div>
+                        <div
+                          class="row"
+                          style="font-size: small; font-weight: lighter"
+                        >
+                          $ 10000000
+                        </div>
                       </div>
                     </div>
                   </li>
@@ -751,31 +832,37 @@
                     style="background-color: #1f1f29; color: aliceblue"
                   >
                     <div class="row">
-                      <div class="col-6">Forth</div>
-                      <div class="col-6" style="padding-right: 0px">
-                        price:2000
+                      <div class="col-2" style="color: #8244e5">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-6-circle"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8Zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM8.21 3.855c1.612 0 2.515.99 2.573 1.899H9.494c-.1-.358-.51-.815-1.312-.815-1.078 0-1.817 1.09-1.805 3.036h.082c.229-.545.855-1.155 1.98-1.155 1.254 0 2.508.88 2.508 2.555 0 1.77-1.218 2.783-2.847 2.783-.932 0-1.84-.328-2.409-1.254-.369-.603-.597-1.459-.597-2.642 0-3.012 1.248-4.407 3.117-4.407Zm-.099 4.008c-.92 0-1.564.65-1.564 1.576 0 1.032.703 1.635 1.558 1.635.868 0 1.553-.533 1.553-1.629 0-1.06-.744-1.582-1.547-1.582Z"
+                          />
+                        </svg>
                       </div>
-                    </div>
-                  </li>
-                  <li
-                    class="list-group-item"
-                    style="background-color: #1f1f29; color: aliceblue"
-                  >
-                    <div class="row">
-                      <div class="col-6">Fifth</div>
-                      <div class="col-6" style="padding-right: 0px">
-                        price:2000
+                      <div class="col-5">
+                        <div class="row">Binance Coin</div>
+                        <div
+                          class="row"
+                          style="font-size: small; font-weight: lighter"
+                        >
+                          BNB
+                        </div>
                       </div>
-                    </div>
-                  </li>
-                  <li
-                    class="list-group-item"
-                    style="background-color: #1f1f29; color: aliceblue"
-                  >
-                    <div class="row">
-                      <div class="col-6">Sixth</div>
-                      <div class="col-6" style="padding-right: 0px">
-                        price:2000
+                      <div class="col-5" style="padding-right: 0px">
+                        <div class="row">BNB 2000124.00</div>
+                        <div
+                          class="row"
+                          style="font-size: small; font-weight: lighter"
+                        >
+                          $ 10000000
+                        </div>
                       </div>
                     </div>
                   </li>
@@ -792,5 +879,37 @@
       integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
       crossorigin="anonymous"
     ></script>
+    <script>
+      var xValues = [100, 200, 300, 400, 500, 600, 700, 800, 900, 1000];
+
+      new Chart("myChart", {
+        type: "line",
+        data: {
+          labels: xValues,
+          datasets: [
+            {
+              data: [860, 1140, 1060, 1060, 1070, 1110, 1330, 2210, 7830, 2478],
+              borderColor: "red",
+              fill: false,
+            },
+            {
+              data: [
+                1600, 1700, 1700, 1900, 2000, 2700, 4000, 5000, 6000, 7000,
+              ],
+              borderColor: "green",
+              fill: false,
+            },
+            {
+              data: [300, 700, 2000, 5000, 6000, 4000, 2000, 1000, 200, 100],
+              borderColor: "blue",
+              fill: false,
+            },
+          ],
+        },
+        options: {
+          legend: { display: false },
+        },
+      });
+    </script>
   </body>
 </html>
