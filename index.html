@@ -55,7 +55,7 @@
     }
 
     body {
-      background-color: #2f2f3b;
+      background-color: #0f0f12;
     }
     .vertical {
       border-left: 5px solid black;
@@ -64,6 +64,9 @@
     .list {
       margin-bottom: 1rem;
       font-family: Sans;
+    }
+    .heading {
+      font-family: Roboto;
     }
   </style>
   <body>
@@ -395,14 +398,16 @@
                 <div class="col">
                   <div
                     class="card"
-                    style="background-color: #1f1f29; color: aliceblue"
+                    style="background-color: black; color: aliceblue"
                   >
                     <!-- <img src="..." class="card-img-top" alt="..." /> -->
                     <div class="card-body">
-                      <h5 class="card-title">Bitcoin</h5>
-                      <h9 class="card-title" style="color: grey">My Balance</h9>
-                      <h3 class="card-title">$ 5000</h3>
-                      <p class="card-text" style="color: #f7931a">
+                      <h5 class="card-title heading">Bitcoin</h5>
+                      <h9 class="card-title heading" style="color: grey"
+                        >My Balance</h9
+                      >
+                      <h3 class="card-title heading">$ 5000</h3>
+                      <p class="card-text heading" style="color: #f7931a">
                         13000000 BTC
                       </p>
                     </div>
@@ -411,32 +416,36 @@
                 <div class="col">
                   <div
                     class="card"
-                    style="background-color: #1f1f29; color: aliceblue"
+                    style="background-color: black; color: aliceblue"
                   >
                     <!-- <img src="..." class="card-img-top" alt="..." /> -->
                     <div class="card-body">
-                      <h5 class="card-title">Ethereum</h5>
-                      <h9 class="card-title" style="color: grey"
+                      <h5 class="card-title heading">Ethereum</h5>
+                      <h9 class="card-title heading" style="color: grey"
                         >Monthly Income</h9
                       >
-                      <h3 class="card-title">$ 500</h3>
-                      <p class="card-text" style="color: #739cc4">100000 ETH</p>
+                      <h3 class="card-title heading">$ 500</h3>
+                      <p class="card-text heading" style="color: #739cc4">
+                        100000 ETH
+                      </p>
                     </div>
                   </div>
                 </div>
                 <div class="col">
                   <div
                     class="card"
-                    style="background-color: #1f1f29; color: aliceblue"
+                    style="background-color: black; color: aliceblue"
                   >
                     <!-- <img src="..." class="card-img-top" alt="..." /> -->
                     <div class="card-body">
-                      <h5 class="card-title">Polygon</h5>
-                      <h9 class="card-title" style="color: grey"
+                      <h5 class="card-title heading">Polygon</h5>
+                      <h9 class="card-title heading" style="color: grey"
                         >Monthly Expense</h9
                       >
-                      <h3 class="card-title">$ 50</h3>
-                      <p class="card-text" style="color: #8244e5">8000 MATIC</p>
+                      <h3 class="card-title heading">$ 50</h3>
+                      <p class="card-text heading" style="color: #8244e5">
+                        8000 MATIC
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -454,35 +463,25 @@
                     class="card"
                     style="
                       height: 15rem;
-                      background-color: #1f1f29;
+                      background-color: black;
                       color: aliceblue;
                     "
                   >
                     <!-- <img src="..." class="card-img-top" alt="..." /> -->
                     <div class="card-body">
-                      <h5 class="card-title">Wish List</h5>
+                      <h5 class="card-title heading">Wish List</h5>
                       <canvas id="myChart" style="width: 100%"></canvas>
                     </div>
                   </div>
                 </div>
                 <div class="col">
-                  <div
-                    class="card"
-                    style="
-                      height: 15rem;
-                      background-color: #1f1f29;
-                      color: aliceblue;
-                    "
-                  >
-                    <!-- <img src="..." class="card-img-top" alt="..." /> -->
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">
-                        This is a longer card with supporting text below as a
-                        natural lead-in to additional content. This content is a
-                        little bit longer.
-                      </p>
-                    </div>
+                  <div class="card text-bg-dark">
+                    <img
+                      style="height: 15rem"
+                      src="https://images.pexels.com/photos/4512439/pexels-photo-4512439.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                      class="card-img"
+                      alt="..."
+                    />
                   </div>
                 </div>
               </div>
@@ -497,21 +496,16 @@
                 <div class="col">
                   <div
                     class="card"
-                    style="
-                      height: 15rem;
-                      background-color: #1f1f29;
-                      color: aliceblue;
-                    "
+                    style="background-color: black; color: aliceblue"
                   >
-                    <!-- <img src="..." class="card-img-top" alt="..." /> -->
                     <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">
-                        This is a longer card with supporting text below as a
-                        natural lead-in to additional content. This content is a
-                        little bit longer.
-                      </p>
+                      <h5 class="card-title heading">Statistics</h5>
                     </div>
+                    <img
+                      src="https://blog.lopp.net/content/images/downloaded_images/Announcing-Statoshi--Realtime-Bitcoin-Node-Statistics/1-mm1oP_pLFRG6bj2ewExAjA.png"
+                      class="card-img-bottom"
+                      alt="..."
+                    />
                   </div>
                 </div>
               </div>
@@ -526,8 +520,8 @@
                   <div
                     class="position-relative"
                     style="
-                      background-color: #2f2f3b;
-                      border-color: #2f2f3b;
+                      background-color: #1f1f29;
+                      border-color: #1f1f29;
                       color: aliceblue;
                     "
                   >
@@ -549,8 +543,8 @@
                   <div
                     class="position-relative"
                     style="
-                      background-color: #2f2f3b;
-                      border-color: #2f2f3b;
+                      background-color: #1f1f29;
+                      border-color: #1f1f29;
                       color: aliceblue;
                     "
                   >
@@ -572,8 +566,8 @@
                   <div
                     class="position-relative"
                     style="
-                      background-color: #2f2f3b;
-                      border-color: #2f2f3b;
+                      background-color: #1f1f29;
+                      border-color: #1f1f29;
                       color: aliceblue;
                     "
                   >
@@ -596,8 +590,8 @@
                   <div
                     class="position-relative"
                     style="
-                      background-color: #2f2f3b;
-                      border-color: #2f2f3b;
+                      background-color: #1f1f29;
+                      border-color: #1f1f29;
                       color: aliceblue;
                     "
                   >
@@ -619,8 +613,8 @@
                   <div
                     class="position-relative"
                     style="
-                      background-color: #2f2f3b;
-                      border-color: #2f2f3b;
+                      background-color: #1f1f29;
+                      border-color: #1f1f29;
                       color: aliceblue;
                     "
                   >
@@ -653,15 +647,15 @@
                 class="card text-center"
                 style="
                   min-height: 20rem;
-                  background-color: #1f1f29;
+                  background-color: black;
                   color: aliceblue;
-                  border-color: #2f2f3b;
+                  border-color: #1f1f29;
                   border-width: 0;
                 "
               >
                 <div
                   class="card-header"
-                  style="background-color: #2f2f3b; border-color: #2f2f3b"
+                  style="background-color: #0f0f12; border-color: #1f1f29"
                 >
                   <ul
                     class="nav nav-tabs card-header-tabs"
@@ -673,65 +667,103 @@
                         aria-current="true"
                         href="#"
                         style="
-                          background-color: #1f1f29;
+                          background-color: black;
                           color: aliceblue;
-                          border-color: #1f1f29;
+                          border-color: black;
                         "
-                        >Order Placed</a
+                        >Buy</a
                       >
                     </li>
                     <li class="nav-item">
                       <a
-                        class="nav-link"
+                        class="nav-link heading"
                         href="#"
                         style="text-decoration: none; color: aliceblue"
-                        >History</a>
+                        >Sell</a
+                      >
                     </li>
                   </ul>
                 </div>
                 <div class="row">
-                  <div class="col-11" style="margin: 1rem 1rem .5rem 1rem; color: aliceblue;">
-                    <div class="card" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" style="background-color: #1f1f29; border-color: grey;">
-                      <div class="card-body" style="margin:-3% 0 -3% 2%">
-                        <div class="row" style=" font-size: 10px;font-weight:100;">
+                  <div
+                    class="col-11"
+                    style="margin: 1rem 1rem 0.5rem 1rem; color: aliceblue"
+                  >
+                    <div
+                      class="card"
+                      id="dropdownMenuButton1"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                      style="background-color: black; border-color: grey"
+                    >
+                      <div class="card-body" style="margin: -3% 0 -3% 2%">
+                        <div
+                          class="row heading"
+                          style="font-size: 10px; font-weight: 100"
+                        >
                           Crypto Currency
                         </div>
-                        <div class="row">
-                          Bitcoin BTC
-                        </div>
+                        <div class="row heading">Bitcoin BTC</div>
                       </div>
-                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                      <ul
+                        class="dropdown-menu"
+                        aria-labelledby="dropdownMenuButton1"
+                      >
+                        <li>
+                          <a class="dropdown-item heading" href="#">Action</a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item heading" href="#"
+                            >Another action</a
+                          >
+                        </li>
+                        <li>
+                          <a class="dropdown-item heading" href="#"
+                            >Something else here</a
+                          >
+                        </li>
                       </ul>
                     </div>
                   </div>
                 </div>
                 <div class="row">
-                  <div class="col-11" style="margin: .5rem 1rem .5rem 1rem; color: aliceblue;">
-                    <div class="card" style="background-color: #1f1f29; border-color: grey;">
-                      <div class="card-body" style="margin:-3% 0 -3% 2%">
-                        <div class="row" style=" font-size: 10px;font-weight:100;">
+                  <div
+                    class="col-11"
+                    style="margin: 0.5rem 1rem 0.5rem 1rem; color: aliceblue"
+                  >
+                    <div
+                      class="card"
+                      style="background-color: black; border-color: grey"
+                    >
+                      <div class="card-body" style="margin: -3% 0 -3% 2%">
+                        <div
+                          class="row heading"
+                          style="font-size: 10px; font-weight: 100"
+                        >
                           Amount
                         </div>
-                        <div class="row">
-                          $ 250000
-                        </div>
+                        <div class="row heading">$ 250000</div>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div class="row">
-                  <div class="col-11" style="margin: .5rem 1rem .5rem 1rem; color: aliceblue;" >
-                    <div class="card" style="background-color: #1f1f29; border-color: grey;">
-                      <div class="card-body" style="margin:-3% 0 -3% 2%;" >
-                        <div class="row" style=" font-size: 10px;font-weight:100;">
+                  <div
+                    class="col-11"
+                    style="margin: 0.5rem 1rem 0.5rem 1rem; color: aliceblue"
+                  >
+                    <div
+                      class="card"
+                      style="background-color: black; border-color: grey"
+                    >
+                      <div class="card-body" style="margin: -3% 0 -3% 2%">
+                        <div
+                          class="row heading"
+                          style="font-size: 10px; font-weight: 100"
+                        >
                           Amount
                         </div>
-                        <div class="row">
-                          0.0023133
-                        </div>
+                        <div class="row heading">0.0023133</div>
                       </div>
                     </div>
                   </div>
@@ -740,12 +772,13 @@
                   <div class="col-12">
                     <div class="card-body">
                       <div class="d-grid gap-2">
-                        <button class="btn btn-primary" type="button">Buy BTC</button>
+                        <button class="btn btn-primary heading" type="button">
+                          Buy BTC
+                        </button>
                       </div>
                     </div>
                   </div>
                 </div>
-                
               </div>
             </div>
           </div>
@@ -753,13 +786,13 @@
             <div class="col-12">
               <div
                 class="card"
-                style="background-color: #1f1f29; color: aliceblue"
+                style="background-color: black; color: aliceblue"
               >
-                <div class="card-header">My Portfolio</div>
+                <div class="card-header heading">My Portfolio</div>
                 <ul class="list-group list-group-flush">
                   <li
                     class="list-group-item"
-                    style="background-color: #1f1f29; color: aliceblue"
+                    style="background-color: black; color: aliceblue"
                   >
                     <div class="row">
                       <div class="col-2" style="color: #f7931a">
@@ -777,19 +810,19 @@
                         </svg>
                       </div>
                       <div class="col-5">
-                        <div class="row">Bitcoin</div>
+                        <div class="row heading">Bitcoin</div>
                         <div
                           class="row"
-                          style="font-size: small; font-weight: lighter"
+                          style="font-size: 70%; font-weight: lighter"
                         >
                           BTC
                         </div>
                       </div>
                       <div class="col-5" style="padding-right: 0px">
-                        <div class="row">BTC 2000124.00</div>
+                        <div class="row heading">BTC 2000124.00</div>
                         <div
-                          class="row"
-                          style="font-size: small; font-weight: lighter"
+                          class="row heading"
+                          style="font-size: 70%; font-weight: lighter"
                         >
                           $ 10000000
                         </div>
@@ -798,7 +831,7 @@
                   </li>
                   <li
                     class="list-group-item"
-                    style="background-color: #1f1f29; color: aliceblue"
+                    style="background-color: black; color: aliceblue"
                   >
                     <div class="row">
                       <div class="col-2" style="color: red">
@@ -816,19 +849,19 @@
                         </svg>
                       </div>
                       <div class="col-5">
-                        <div class="row">Polygon</div>
+                        <div class="row heading">Polygon</div>
                         <div
-                          class="row"
-                          style="font-size: small; font-weight: lighter"
+                          class="row heading"
+                          style="font-size: 70%; font-weight: lighter"
                         >
                           MATIC
                         </div>
                       </div>
                       <div class="col-5" style="padding-right: 0px">
-                        <div class="row">MATIC 2000124.00</div>
+                        <div class="row heading">MATIC 2000124.00</div>
                         <div
-                          class="row"
-                          style="font-size: small; font-weight: lighter"
+                          class="row heading"
+                          style="font-size: 70%; font-weight: lighter"
                         >
                           $ 10000000
                         </div>
@@ -837,7 +870,7 @@
                   </li>
                   <li
                     class="list-group-item"
-                    style="background-color: #1f1f29; color: aliceblue"
+                    style="background-color: black; color: aliceblue"
                   >
                     <div class="row">
                       <div class="col-2" style="color: #739cc4">
@@ -855,19 +888,19 @@
                         </svg>
                       </div>
                       <div class="col-5">
-                        <div class="row">Ethereum</div>
+                        <div class="row heading">Ethereum</div>
                         <div
                           class="row"
-                          style="font-size: small; font-weight: lighter"
+                          style="font-size: 70%; font-weight: lighter"
                         >
                           ETH
                         </div>
                       </div>
                       <div class="col-5" style="padding-right: 0px">
-                        <div class="row">ETH 2000124.00</div>
+                        <div class="row heading">ETH 2000124.00</div>
                         <div
-                          class="row"
-                          style="font-size: small; font-weight: lighter"
+                          class="row heading"
+                          style="font-size: 70%; font-weight: lighter"
                         >
                           $ 10000000
                         </div>
@@ -876,7 +909,7 @@
                   </li>
                   <li
                     class="list-group-item"
-                    style="background-color: #1f1f29; color: aliceblue"
+                    style="background-color: black; color: aliceblue"
                   >
                     <div class="row">
                       <div class="col-2" style="color: #8244e5">
@@ -894,19 +927,19 @@
                         </svg>
                       </div>
                       <div class="col-5">
-                        <div class="row">Binance Coin</div>
+                        <div class="row heading">Binance Coin</div>
                         <div
-                          class="row"
-                          style="font-size: small; font-weight: lighter"
+                          class="row heading"
+                          style="font-size: 70%; font-weight: 100"
                         >
                           BNB
                         </div>
                       </div>
                       <div class="col-5" style="padding-right: 0px">
-                        <div class="row">BNB 2000124.00</div>
+                        <div class="row heading">BNB 2000124.00</div>
                         <div
-                          class="row"
-                          style="font-size: small; font-weight: lighter"
+                          class="row heading"
+                          style="font-size: 70%; font-weight: 100"
                         >
                           $ 10000000
                         </div>
